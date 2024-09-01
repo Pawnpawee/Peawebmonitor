@@ -1,0 +1,36 @@
+@extends('http::layouts.base')
+
+@section('title', 'Admin - Create Account')
+
+@section('content')
+    <div class="-mx-4">
+        <div class="p-4 mb-4 bg-white block sm:flex items-center justify-between border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full">
+                @include("http::commons.breadcrumb", [
+                    'items' => [
+                        [
+                            'text' => 'Accounts',
+                            'url' => route('admin::account')
+                        ],
+                        [
+                            'text' => 'Create account',
+                            'url' => '#'
+                        ]
+                    ]
+                ])
+
+                <div class="mb-4">
+                    <h1 class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">
+                        Account</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <div class="card">
+            {{ Form::open(['url' => route('admin::account.store'), 'method' => 'POST', 'autocomplete' => 'off']) }}
+                @include('admin::account.partials._form')
+            {{ Form::close() }}
+        </div>
+    </div>
+@stop

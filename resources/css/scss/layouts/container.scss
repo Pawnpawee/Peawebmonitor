@@ -1,0 +1,35 @@
+.container-list {
+    @apply container mx-auto bg-white border border-gray-200 rounded-xl p-5 my-5;
+}
+
+.table {
+    @apply w-full text-left table-auto;
+
+    thead th {
+        @apply font-bold ;
+    }
+}
+
+.row-list {
+    @apply odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700;
+}
+
+.row-list-head {
+    @apply px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white;
+}
+
+.description {
+    @apply mt-1 font-light text-gray-500 text-xs;
+}
+
+.container-search {
+    @apply flex justify-between mb-5;
+}
+
+.form-search {
+    @apply flex items-center w-4/5;
+}
+
+.modal-div {
+    @apply overflow-y-auto overflow-x-hidden top-0 right-0 left-0 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full;
+}

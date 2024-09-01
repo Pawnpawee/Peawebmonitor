@@ -1,0 +1,50 @@
+.form-control {
+    @apply bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500;
+
+    line-height: unset;
+
+    &:readonly {
+        pointer-events: none;
+    }
+}
+
+.radio {
+    @apply w-4 h-4;
+    animation: none !important;
+
+    &:checked,
+    &[aria-checked="true"] {
+        box-shadow: 0 0 0 2px var(--fallback-b1,oklch(var(--b1)/1)) inset, 0 0 0 2px var(--fallback-b1,oklch(var(--b1)/1)) inset;
+    }
+}
+
+.dark {
+    .radio {
+        &:checked,
+        &[aria-checked="true"] {
+            background-image: unset;
+        }
+    }
+}
+
+label {
+    position: relative;
+
+    &.required::after {
+        content: '*';
+        @apply text-red-500 text-sm ml-[3px];
+    }
+}
+
+// input[type="time"] {
+//     @apply flex flex-row text-center;
+// }
+
+.toggle {
+    &:focus {
+        box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder) !important;
+    }
+}
+.error {
+    @apply text-sm text-error;
+}

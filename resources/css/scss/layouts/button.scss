@@ -1,0 +1,100 @@
+.action {
+    @apply text-white focus:outline-none  focus:ring-4 focus:ring-gray-100 font-bold rounded-md text-xs px-4 py-2 me-2;
+
+    &.success {
+    @apply bg-success hover:bg-lime-700;
+
+    }
+
+    &.danger {
+        @apply bg-danger hover:bg-red-600;
+    }
+    
+    &.warning {
+        @apply bg-warning hover:bg-yellow-400;
+    } 
+
+    &.save {
+        @apply bg-primary hover:bg-primary;
+    }
+
+    &.cancle {
+        @apply bg-gray-400 hover:bg-gray-600;
+    }
+}
+
+
+.state {
+    @apply  text-white text-xs font-medium me-2 px-2.5 py-0.5 rounded-full;
+
+    &.inactive { 
+        @apply bg-inactive; 
+    }
+
+    &.success { 
+        @apply bg-success; 
+    }
+
+}
+
+.input-form {
+    @apply text-xs border border-primary rounded-full focus:border-primary focus:ring-primary block w-full;
+
+    &:disabled {
+        @apply bg-inactive;
+    }
+
+}
+
+.dropdown-form {
+    @apply text-xs bg-white border border-primary rounded-full focus:ring-primary focus:border-primary block w-full;
+    
+    &:disabled {
+        @apply bg-inactive;
+    }
+}
+
+.label-form {
+    @apply block mb-2 text-xs font-medium text-gray-900 dark:text-white;
+}
+
+.textarea-form {
+   @apply p-2.5 text-xs border border-primary rounded-lg focus:border-primary focus:ring-primary block w-full;
+
+   &:disabled {
+    @apply bg-inactive;
+    }
+
+}
+
+.btn-icon {
+    @apply py-2 px-3 ms-2 text-sm font-medium text-white rounded-lg;
+
+    &.inactive { 
+        @apply bg-inactive hover:bg-gray-500; 
+    }
+
+    &.info { 
+        @apply bg-info hover:bg-blue-800; 
+    }
+}
+
+.bordered-badge {
+    @apply  text-xs font-medium me-2 px-2.5 py-0.5 rounded;
+
+    &.info {
+        @apply bg-blue-100 text-blue-800 dark:bg-gray-700 dark:text-blue-400 border border-blue-400;
+    }
+
+    &.order {
+        @apply bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-400 border border-gray-500
+    }
+}
+
+.line-modal {
+    @apply bg-gray-400 w-full h-[1px] rounded-lg;
+}
+
+.error-text {
+    @apply text-xs text-red-600 italic;
+}

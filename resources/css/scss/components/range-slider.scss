@@ -1,0 +1,17 @@
+@import url('../../../../public/vendor/range-slider/css/range-slider.min.css');
+
+.rs-container {
+    .rs-selected {
+        transition: none;
+    }
+
+    .rs-pointer {
+        transition: none !important;
+    }
+
+    .rs-scale {
+        span:last-child {
+            width: 0 !important;
+        }
+    }
+}

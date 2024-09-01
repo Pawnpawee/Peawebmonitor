@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "./scss/components/card.scss";
+@import "./scss/components/table.scss";
+/* @import "./scss/components/form.scss"; */
+@import "./scss/components/button.scss";
+@import "./scss/components/badge.scss";
+@import "./scss/components/alert.scss";
+/*@import "./scss/components/select2.scss";*/
+@import "./scss/components/range-slider.scss";
+
+
+@import "./scss/layouts/base.scss";
+@import "./scss/layouts/header.scss";
+@import "./scss/layouts/aside.scss";
+@import "./scss/layouts/button.scss";
+@import "./scss/layouts/container.scss";

@@ -1,0 +1,18 @@
+.badge {
+    @apply text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-300;
+}
+
+.badge-success {
+    @extend .badge;
+    @apply bg-green-100 text-green-800 dark:bg-gray-700 dark:text-green-400;
+}
+
+.badge-danger {
+    @extend .badge;
+    @apply bg-red-100 text-red-800 dark:bg-gray-700 dark:text-red-400;
+}
+
+.badge-info {
+    @extend .badge;
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-300;
+}

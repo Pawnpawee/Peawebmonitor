@@ -1,0 +1,1 @@
+<hr class="w-full h-2 bg-gold border-0 rounded my-4">

@@ -1,0 +1,77 @@
+.table {
+    @apply min-w-full divide-y divide-gray-200 dark:divide-gray-600;
+
+    thead {
+        @apply bg-gray-100 dark:bg-gray-700;
+
+        th {
+            @apply p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400;
+        }
+    }
+
+    tbody {
+        @apply bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700;
+
+        tr {
+            @apply hover:bg-gray-50 dark:hover:bg-gray-700;
+
+            td {
+                @apply p-4;
+            }
+
+            &.td\:align-baseline {
+                td {
+                    @apply align-baseline;
+                }
+            }
+        }
+    }
+}
+
+.table :where(thead, tbody) :where(tr:not(:last-child)), .table :where(thead, tbody) :where(tr:first-child:last-child) {
+    @apply border-0;
+}
+
+
+.table :where(.table-pin-cols tr th) {
+    @apply left-0 right-auto bg-transparent;
+}
+
+.table-pin-cols {
+    .pin-cols {
+        position: sticky;
+        left: 0px;
+        right: 0px;
+        @apply z-10;
+    }
+
+    thead {
+        .pin-cols {
+            @apply bg-gray-100 dark:bg-gray-700;
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                @apply bg-white;
+            }
+
+            &:hover {
+                td {
+                    @apply bg-gray-50 dark:bg-gray-700;
+                }
+            }
+        }
+    }
+}
+
+:is(.dark .table-pin-cols) {
+    tbody {
+        tr {
+            td {
+                @apply bg-gray-800;
+            }
+        }
+    }
+}
